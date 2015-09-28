@@ -40,12 +40,7 @@
 			<version>0.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
-		<dependency>
-			<groupId>com.fb.ffg</groupId>
-			<artifactId>SocketServer</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<type>war</type>
-		</dependency>
+		
   </dependencies>
   <build>
 		<plugins>
@@ -99,14 +94,7 @@
 								 <context>/web4</context>
 								 </properties>
 							</deployable>
-							<deployable>
-								 <groupId>com.fb.ffg</groupId> 
-								 <artifactId>SocketServer</artifactId>
-								 <type>war</type>
-								 <properties>
-								 <context>/SocketServer</context>
-								 </properties>
-							</deployable>
+							
 						</deployables>
 					</deployer>
 				</configuration>
