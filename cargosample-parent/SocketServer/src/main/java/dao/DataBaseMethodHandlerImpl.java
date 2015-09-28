@@ -17,7 +17,7 @@ import util.ReadProperties;
 
 public class DataBaseMethodHandlerImpl implements DataBaseMethodHandler {
 	
-	final static String url = "jdbc:mysql://192.168.4.61:3306/test";
+	final static String url = "jdbc:mysql://192.168.4.61:3306/test?autoReconnect=true&failOverReadOnly=false";
 	final static String userName = "root";
 	final static String password = "";
 	Connection conn = null;
