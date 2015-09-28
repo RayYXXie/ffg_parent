@@ -8,10 +8,10 @@
 	    <groupId>org.jdonee.cargosample</groupId>
 	    <version>0.0.1-SNAPSHOT</version>
    	</parent>
-    <groupId>org.jdonee.cargosample</groupId>
-    <artifactId>SocketServer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+        <groupId>com.fb.ffg</groupId>
+        <artifactId>SocketServer</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <packaging>war</packaging>
   	<name>SocketServer Maven Webapp</name>
   	<url>http://maven.apache.org</url>
 	<dependencies>
