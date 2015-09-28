@@ -75,15 +75,6 @@ done
 
 echo "all webapp are stared"
 
-while true ;
-do
-   result10=`curl -w %{http_code}"\n" curl  http://192.168.4.37:18080/SocketServer/index.jsp|grep 200`
-   if [ ! -z $result9 ] && [ $result9 -eq 200 ];
-   then
-	 break;
-   fi
-done
-
 STR=".:/usr/java/jdk1.7.0_79/lib:/usr/java/jdk1.7.0_79/jre/lib:/root/ffg_runhome/lib/httpasyncclient-cache-4.1.jar:/root/ffg_runhome/lib/jdom.jar:/root/ffg_runhome/lib/mysql-connector-java-5.1.7-bin.jar:/root/ffg_runhome/lib/httpclient-4.4.1.jar:/root/ffg_runhome/lib/jsch-0.1.53.jar:/root/ffg_runhome/lib/commons-codec-1.9.jar:/root/ffg_runhome/lib/httpclient-cache-4.4.1.jar:/root/ffg_runhome/lib/log4j-1.2.17.jar:/root/ffg_runhome/lib/commons-logging-1.2.jar:/root/ffg_runhome/lib/httpcore-4.4.1.jar:/root/ffg_runhome/lib/httpcore-nio-4.4.1.jar:/root/ffg_runhome/lib/httpasyncclient-4.1.jar:/root/ffg_runhome/lib/javacsv.jar:/root/.jenkins/workspace/ffg_parent/cargosample-pparent/SocketServer/target/SocketServer-0.0.1-SNAPSHOT.jar"
 export CLASSPATH=$STR
 java -Xms50m -Xmx250m startcontrol.SocketServer >> /usr/ffg_server/logout1.txt &
