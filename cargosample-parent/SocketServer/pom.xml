@@ -9,7 +9,7 @@
 	    <version>0.0.1-SNAPSHOT</version>
    	</parent>
     <groupId>org.jdonee.cargosample</groupId>
-    <artifactId>web1</artifactId>
+    <artifactId>SocketServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
   	<name>SocketServer Maven Webapp</name>
