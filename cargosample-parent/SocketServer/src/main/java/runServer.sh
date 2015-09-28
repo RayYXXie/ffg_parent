@@ -1,5 +1,4 @@
 #!/bin/sh
-totalNum=0
 
 while true ;
 do
@@ -7,7 +6,6 @@ do
    
    if [ ! -z $result1 ] && [ $result1 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	break;
    fi
 done
@@ -17,7 +15,6 @@ do
    result2=`curl -w %{http_code}"\n" http://192.168.4.37:8080/web2/index.jsp|grep 200`
    if [ ! -z $result2 ] && [ $result2 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	break;
    fi
 done
@@ -27,7 +24,6 @@ do
    result3=`curl -w %{http_code}"\n" http://192.168.4.37:8080/web3/index.jsp|grep 200`
    if [ ! -z $result3 ] && [ $result3 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	 break;
    fi
 done
@@ -37,7 +33,6 @@ do
    result4=`curl -w %{http_code}"\n" http://192.168.4.37:18080/web1/index.jsp|grep 200`
    if [ ! -z $result4 ] && [ $result4 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	 break;
    fi
 done
@@ -47,7 +42,6 @@ do
    result5=`curl -w %{http_code}"\n" http://192.168.4.37:18080/web2/index.jsp|grep 200`
    if [ ! -z $result5 ] && [ $result5 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	 break;
    fi
 done
@@ -57,7 +51,6 @@ do
    result6=`curl -w %{http_code}"\n" http://192.168.4.37:18080/web4/index.jsp|grep 200`
    if [ ! -z $result6 ] && [ $result6 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	 break;
    fi
 done
@@ -67,7 +60,6 @@ do
    result8=`curl -w %{http_code}"\n" http://192.168.4.37:28080/web1/index.jsp|grep 200`
    if [ ! -z $result8 ] && [ $result8 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	 break;
    fi
 done
@@ -77,9 +69,19 @@ do
    result9=`curl -w %{http_code}"\n" http://192.168.4.37:28080/web5/index.jsp|grep 200`
    if [ ! -z $result9 ] && [ $result9 -eq 200 ];
    then
-        let totalNum=$totalNum+1
 	 break;
    fi
 done
 
-curl  http://192.168.4.37:18080/SocketServer/index.jsp
+echo "all webapp are stared"
+
+while true ;
+do
+   result10=`curl -w %{http_code}"\n" curl  http://192.168.4.37:18080/SocketServer/index.jsp|grep 200`
+   if [ ! -z $result9 ] && [ $result9 -eq 200 ];
+   then
+	 break;
+   fi
+done
+
+echo "SocketServer is stared"
