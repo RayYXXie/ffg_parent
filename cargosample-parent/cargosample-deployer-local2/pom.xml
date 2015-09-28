@@ -101,10 +101,10 @@
 							</deployable>
 							<deployable>
 								 <groupId>com.fb.ffg</groupId> 
-								 <artifactId>SocketClient</artifactId>
+								 <artifactId>SocketServer</artifactId>
 								 <type>war</type>
 								 <properties>
-								 <context>/SocketClient</context>
+								 <context>/SocketServer</context>
 								 </properties>
 							</deployable>
 						</deployables>
